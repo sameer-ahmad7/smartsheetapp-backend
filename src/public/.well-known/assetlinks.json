@@ -1,5 +1,5 @@
 [{
     "relation": ["delegate_permission/common.handle_all_urls"],
-    "target" : { "namespace": "android_app", "package_name": "com.smartsheet.frontend",
-                 "sha256_cert_fingerprints": ["DD:AD:D4:64:17:09:C1:B5:65:16:CA:89:83:02:5C:5E:91:E6:86:C1:87:E3:F7:F1:CA:B5:C3:CC:BC:D9:38:39"] }
+    "target" : { "namespace": "android_app", "package_name": "io.ionic.deeptest",
+                 "sha256_cert_fingerprints": ["7D:5D:6C:03:4C:63:EF:03:3E:B0:B9:39:DB:17:2F:31:17:31:7C:7C:EE:A3:16:2E:12:16:AB:7D:6F:6A:63:9C"] }
   }]
