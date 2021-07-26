@@ -23,7 +23,8 @@ if (!process.env.PORT) {
 
 const app = express();
 const corsOptions: CorsOptions={
-	allowedHeaders:['Content-Type','Authorization']
+    allowedHeaders:['Content-Type','Authorization'],
+    origin:['*']
 };
 
 app.use(cors(corsOptions));
