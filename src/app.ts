@@ -49,6 +49,28 @@ function authorizeURL(params) {
      return res.send('<p>Login successful<p>');
  });
 
+ app.get('/accessToken/:code',(req,res)=>{
+     const authCode=req.params.code;
+     console.log(authCode);
+     const generated_hash = crypto
+         .createHash('sha256')
+         .update(process.env.APP_SECRET + "|" + authCode)
+         .digest('hex');
+     const options = {
+         queryParameters: {
+             client_id: process.env.APP_CLIENT_ID,
+             code: authCode,
+             hash: generated_hash
+         }
+     };
+ 
+     smartsheet.tokens.getAccessToken(options, processToken)
+         .then((token) => {
+             return res.status(200).json({token});
+         });
+     
+ });
+
  app.get('/callback', (req, res) => {
     const authCode = req.query.code;
     const generated_hash = crypto
