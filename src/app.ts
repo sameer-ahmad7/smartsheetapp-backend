@@ -3,6 +3,7 @@ import * as dotenv from 'dotenv';
 import qs from 'query-string';
 import * as crypto from 'crypto';
 import * as smartclient from 'smartsheet';
+import path from 'path';
 
 // instantiating the Smartsheet client
 const smartsheet = smartclient.createClient({
@@ -20,6 +21,7 @@ if (!process.env.PORT) {
 }
 
 const app = express();
+app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 

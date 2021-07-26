@@ -1,0 +1,5 @@
+[{
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target" : { "namespace": "android_app", "package_name": "com.smartsheet.frontend",
+                 "sha256_cert_fingerprints": ["DD:AD:D4:64:17:09:C1:B5:65:16:CA:89:83:02:5C:5E:91:E6:86:C1:87:E3:F7:F1:CA:B5:C3:CC:BC:D9:38:39"] }
+  }]
